@@ -1,0 +1,239 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+}
+
+
+.calculator-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #2d3436;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+header p {
+    color: #636e72;
+    font-size: 15px;
+}
+
+
+.bmi-form {
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2d3436;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 18px;
+    border: 2px solid #e1e8ed;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+
+.calc-button {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calc-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+
+.results {
+    padding: 30px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-left: 5px solid #00b894;
+}
+
+.bmi-number {
+    font-size: 52px;
+    font-weight: 800;
+    color: #2d3436;
+    display: block;
+    line-height: 1.1;
+}
+
+.bmi-label {
+    color: #636e72;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.status {
+    margin: 25px 0;
+}
+
+.status h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.status p {
+    color: #636e72;
+    margin-bottom: 5px;
+}
+
+.advice {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 12px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.7);
+}
+
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e1e8ed;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    transition: width 1s ease;
+    border-radius: 6px;
+}
+
+.normal-fill { background: linear-gradient(90deg, #00b894, #55efc4); width: 85%; }
+.underweight-fill { background: linear-gradient(90deg, #fdcb6e, #ffeaa7); width: 40%; }
+.overweight-fill { background: linear-gradient(90deg, #fd79a8, #e17055); width: 70%; }
+.obese-fill { background: linear-gradient(90deg, #d63031, #e84393); width: 95%; }
+
+
+.demo-results {
+    border-top: 1px solid #e1e8ed;
+    padding-top: 20px;
+}
+
+.demo-results summary {
+    cursor: pointer;
+    padding: 12px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 12px;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.sample-data {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 12px;
+}
+
+.sample-data div {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.sample-data div:last-child {
+    border-bottom: none;
+}
+
+
+@media (max-width: 480px) {
+    .calculator-card {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    .bmi-number {
+        font-size: 42px;
+    }
+    
+    header h1 {
+        font-size: 26px;
+    }
+}
+
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+
+.underweight { border-left-color: #fdcb6e; }
+.underweight h2 { color: #fdcb6e; }
+
+.normal { border-left-color: #00b894; }
+.normal h2 { color: #00b894; }
+
+.overweight { border-left-color: #fd79a8; }
+.overweight h2 { color: #fd79a8; }
+
+.obese { border-left-color: #d63031; }
+.obese h2 { color: #d63031; }
